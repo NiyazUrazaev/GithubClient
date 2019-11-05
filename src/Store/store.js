@@ -1,4 +1,4 @@
-import {createStore, combineReducers} from "redux";
+import {createStore} from "redux";
 
 const initialState = {
   counter: 0,
@@ -18,7 +18,21 @@ const counter = (state = initialState, action) => {
   }
 };
 
+const header = (state = initialState, action) => {
+  switch (action.type) {
+    case "MYPROFILE":
+      return alert("My Profile");
+    case "MYREPOSITORIES":
+      return alert("My repos");
+    case "EXIT":
+      return alert("Exit");
+    default:
+      return state;
+  }
+};
+
 let store = createStore(
+  header,
   counter,
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -27,5 +41,9 @@ let store = createStore(
 export const decrement = {type: "DECREMENT"};
 export const increment = {type: "INCREMENT"};
 export const reset = {type: "RESET"};
+export const myProfile = {type: "MYPROFILE"};
+export const myRepos = {type: "MYREPOSITORIES"};
+export const exit = {type: "EXIT"};
+
 
 export default store;
