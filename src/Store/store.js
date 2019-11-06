@@ -1,4 +1,4 @@
-import {createStore} from "redux";
+import {combineReducers, createStore} from "redux";
 
 const initialState = {
   counter: 0,
@@ -32,8 +32,7 @@ const header = (state = initialState, action) => {
 };
 
 let store = createStore(
-  header,
-  counter,
+  combineReducers({header, counter}),
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

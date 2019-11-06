@@ -6,13 +6,13 @@
   height: 40vmin;
 }
 
-.Header {
-    justify-content: flex-start;
+.header {
+    justify-content: space-between !important;
     display: flex;
+    align-items: center;
 }
-.Header.Button {
-    justify-content: flex-end;
-    display: flex;
+.header .header-button {
+    margin: 0 5px;
 }
 
 .App-link {
