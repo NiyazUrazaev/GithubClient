@@ -6,8 +6,9 @@ import {makeStyles} from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   panel: {
     display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap"
+    flexDirection: "column",
+    flexWrap: "wrap",
+    marginTop: 30
   },
   userInfo: {
     marginRight: "50px"
@@ -19,7 +20,6 @@ const MyProfile = () => {
   return (
     <div className={classes.panel}>
       <ViewerInfo className={classes.userInfo}/>
-      <ViewerRepositories/>
     </div>
   )
 };

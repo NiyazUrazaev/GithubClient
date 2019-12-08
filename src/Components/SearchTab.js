@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {Grid, Typography, TextField, Button} from '@material-ui/core';
 import {useLazyQuery} from "@apollo/react-hooks";
-import EntityCard from "./EntityCard";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import ProfilePage from "./ProfilePage";
 
@@ -49,7 +48,7 @@ export default function SearchTab({query, title, entityName, initial_input}) {
                         <LinearProgress />
                     )}
                     {data && (
-                        <ProfilePage/>
+                        <ProfilePage data={data} entity={entityName}/>
                     )}
                 </Grid>
             </Grid>

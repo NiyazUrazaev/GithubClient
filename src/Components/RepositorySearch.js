@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 
 const RepositorySearch = () => {
     const classes = useStyles();
-    const [input, setInput] = useState("react");
+    const [input, setInput] = useState("Django");
     const [getData, {loading, error, data}] = useLazyQuery(REPOS_QUERY);
 
     const [addStar] = useMutation(ADD_STAR,

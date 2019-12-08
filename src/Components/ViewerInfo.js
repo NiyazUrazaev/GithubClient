@@ -1,8 +1,8 @@
 import React from "react";
 import GET_VIEWER_INFO from "../Queries/Get/viewer";
 import {Query} from "@apollo/react-components";
-import EntityCard from "./EntityCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import ProfilePage from "./ProfilePage";
 
 const ViewerInfo = () => (
     <Query query={GET_VIEWER_INFO}>
@@ -11,7 +11,7 @@ const ViewerInfo = () => (
                 return <CircularProgress />;
             }
             return (
-                <EntityCard data={viewer} entity={"viewer"}/>
+                <ProfilePage data={viewer} entity={"viewer"}/>
             )
         }}
     </Query>

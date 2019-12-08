@@ -18,7 +18,7 @@ const httpLink = new HttpLink({
   uri: GITHUB_BASE_URL,
   headers: {
     authorization: `Bearer ${
-      process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN = "5d3c47fd5dcc81792eac0ec1fb481604b0dc183d"
+      process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN = "token"
     }`,
   },
 });

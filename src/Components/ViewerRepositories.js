@@ -17,7 +17,8 @@ import {Query} from "@apollo/react-components";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    marginTop: 25,
   },
   content: {
     width: "100%"
