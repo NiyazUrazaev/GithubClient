@@ -26,12 +26,12 @@ const App = () => {
   return (
     <div>
       <Router>
-        <Redirect from="/" to="protected" />
+        <Redirect from="/" to="" />
         <Switch>
           <Route path="/login">
             <LaginPage login={login}/>
           </Route>
-          <PrivateRoute path="/protected" token={token}>
+          <PrivateRoute path="" token={token}>
             <Header token={token} logout={logout}/>
             <MainPage/>
           </PrivateRoute>

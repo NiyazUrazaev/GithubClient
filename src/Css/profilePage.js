@@ -20,6 +20,10 @@ const profilePageStyle = {
     color: "#999",
     textAlign: "center !important"
   },
+  page: {
+    marginTop: 50,
+    minWidth: "50vw"
+  },
   name: {
     // marginTop: "-80px"
   },
@@ -27,9 +31,9 @@ const profilePageStyle = {
   main: {
     background: "#FFFFFF",
     position: "relative",
-
+    minWidth: "50vw",
     zIndex: "1",
-    marginTop: "300px",
+    marginTop: "400px",
     minHeight: "600px"
   },
   mainRaised: {
@@ -64,11 +68,15 @@ const profilePageStyle = {
     textAlign: "center"
   },
   moreButton: {
-    marginRight: 16,
+    margin: 16,
   },
   botButton: {
     marginBottom: 15,
-  }
+  },
+  buttons: {
+    display: 'flex',
+    justifyContent: "center",
+  },
 };
 
 export default profilePageStyle;

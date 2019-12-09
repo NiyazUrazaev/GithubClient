@@ -29,7 +29,8 @@ const conatinerFluid = {
   paddingLeft: "15px",
   marginRight: "auto",
   marginLeft: "auto",
-  width: "100%"
+  // width: "100%"
+  minWidth: "0.5vw"
 };
 const container = {
   ...conatinerFluid,

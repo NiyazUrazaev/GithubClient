@@ -10,6 +10,7 @@ const GET_VIEWER_INFO = gql`
             url,
             bio,
             email,
+            company,
             repositories (first: 6) {
                 edges {
                     node {

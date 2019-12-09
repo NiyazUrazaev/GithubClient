@@ -17,6 +17,7 @@ function TabPanel(props) {
 
   return (
     <Typography
+      className="repos"
       component="div"
       role="tabpanel"
       hidden={value !== index}

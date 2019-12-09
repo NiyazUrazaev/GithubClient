@@ -3,29 +3,46 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {setContext} from "apollo-link-context";
 import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
+import {createHttpLink, HttpLink} from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { BrowserRouter } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks'
+import {AUTH_TOKEN} from "./constants";
 
 
 const cache = new InMemoryCache();
 
-const GITHUB_BASE_URL = 'https://api.github.com/graphql';
+// const GITHUB_BASE_URL = 'https://api.github.com/graphql';
+//
+// const httpLink = new HttpLink({
+//   uri: GITHUB_BASE_URL,
+//   headers: {
+//     authorization: `Bearer ${
+//       // process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN = ""
+//       localStorage.getItem(AUTH_TOKEN)
+//     }`,
+//   },
+// });
 
-const httpLink = new HttpLink({
-  uri: GITHUB_BASE_URL,
-  headers: {
-    authorization: `Bearer ${
-      process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN = "token"
-    }`,
-  },
+const httpLink = createHttpLink({
+  uri: 'https://api.github.com/graphql'
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem(AUTH_TOKEN)
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : ''
+    }
+  }
 });
 
 const client = new ApolloClient({
-  link: httpLink,
-  cache,
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache()
 });
 
 
