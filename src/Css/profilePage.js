@@ -15,7 +15,6 @@ const profilePageStyle = {
   },
   description: {
     margin: "0 auto",
-    // marginLeft: "-5px",
     width: "70%",
     color: "#999",
     textAlign: "center !important"
@@ -31,7 +30,7 @@ const profilePageStyle = {
   main: {
     background: "#FFFFFF",
     position: "relative",
-    minWidth: "50vw",
+    minWidth: "70vw",
     zIndex: "1",
     marginTop: "400px",
     minHeight: "600px"

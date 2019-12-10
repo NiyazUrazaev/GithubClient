@@ -21,4 +21,5 @@
 
 .repos {
     width: 90vw;
+    display: contents;
 }

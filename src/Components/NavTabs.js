@@ -72,17 +72,17 @@ export default function NavTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color={'#FFFFFF'}>
+      <AppBar position="static" color={"default"}>
         <Tabs
           variant="fullWidth"
           value={value}
           onChange={handleChange}
           aria-label="nav tabs example"
         >
-          <LinkTab label="My profile" href="/my_profile" {...a11yProps(0)} />
-          <LinkTab label="Repositories" href="/repositories" {...a11yProps(1)} />
+          <LinkTab label="Profile" href="/my_profile" {...a11yProps(0)} />
+          <LinkTab label="Repos" href="/repositories" {...a11yProps(1)} />
           <LinkTab label="Users" href="/users" {...a11yProps(2)} />
-          <LinkTab label="Organizations" href="/organizations" {...a11yProps(3)} />
+          <LinkTab label="Company" href="/organizations" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>

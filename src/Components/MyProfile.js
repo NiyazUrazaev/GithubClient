@@ -1,6 +1,5 @@
 import React from "react";
 import ViewerInfo from "./ViewerInfo";
-import ViewerRepositories from "./ViewerRepositories";
 import {makeStyles} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({

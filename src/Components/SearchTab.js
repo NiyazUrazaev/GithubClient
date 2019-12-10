@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {Grid, Typography, TextField, Button} from '@material-ui/core';
 import {useLazyQuery} from "@apollo/react-hooks";
-import LinearProgress from "@material-ui/core/LinearProgress";
 import ProfilePage from "./ProfilePage";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -58,7 +58,7 @@ export default function SearchTab({query, title, entityName, initial_input}) {
             <h5>Not found</h5>
           )}
           {loading && (
-            <LinearProgress/>
+            <CircularProgress />
           )}
           {data && (
             <ProfilePage data={data} entity={entityName} />
