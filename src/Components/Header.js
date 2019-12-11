@@ -5,7 +5,7 @@ import AppBar from "@material-ui/core/AppBar/AppBar";
 import React from "react";
 
 
-const Header = ({token, logout}) => {
+const Header = ({logout}) => {
   return (
     <AppBar position="static">
       <Toolbar className="header">

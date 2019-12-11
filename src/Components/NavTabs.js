@@ -92,11 +92,11 @@ export default function NavTabs() {
         <RepositorySearch/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <SearchTab query={GET_USER_INFO} title={"Search users"} entityName={"user"} initial_input={"gaearon"}/>
+        <SearchTab query={GET_USER_INFO} title={"Search users"} entityName={"user"} initial_input={""}/>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <SearchTab query={GET_ORGANIZATION_INFO} title={"Search organizations"}
-                   entityName={"organization"} initial_input={"Twitter"}/>
+        <SearchTab query={GET_ORGANIZATION_INFO} title={"Search companies"}
+                   entityName={"organization"} initial_input={""}/>
       </TabPanel>
     </div>
   );
