@@ -1,21 +1,15 @@
 import React, {useState} from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// @material-ui/core components
 import {makeStyles} from "@material-ui/core/styles";
-// core components
 import {useMutation} from "@apollo/react-hooks";
-
 import styles from "../Css/profilePage.js";
 import GridContainer from "./GridContainer";
 import GridItem from "./GridItem";
 import FOLLOW_USER from "../Queries/Post/follow";
 import GET_USER_INFO from "../Queries/Get/user";
 import UNFOLLOW_USER from "../Queries/Post/unfollow";
-import Button from "@material-ui/core/Button";
+import {Button, Typography} from "@material-ui/core";
 import ViewerRepositories from "./ViewerRepositories";
-import Typography from "@material-ui/core/Typography";
-import VALIDATION_QUERY from "../Queries/Get/validation";
 
 const useStyles = makeStyles(styles);
 
