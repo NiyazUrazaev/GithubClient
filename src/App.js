@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import {Redirect, Route, Switch} from "react-router";
-import {BrowserRouter as Router} from "react-router-dom";
 import PrivateRoute from "./Components/privateRoute";
 import LaginPage from "./Components/loginPage";
 import {AUTH_TOKEN} from "./constants";
@@ -25,18 +24,16 @@ const App = () => {
 
   return (
     <div>
-      <Router>
-        <Redirect from="/" to="" />
-        <Switch>
-          <Route path="/login">
-            <LaginPage login={login}/>
-          </Route>
-          <PrivateRoute path="" token={token}>
-            <Header token={token} logout={logout}/>
-            <MainPage/>
-          </PrivateRoute>
-        </Switch>
-      </Router>
+      <Redirect from="/" to="" />
+      <Switch>
+        <Route path="/login">
+          <LaginPage login={login}/>
+        </Route>
+        <PrivateRoute path="" token={token}>
+          <Header token={token} logout={logout}/>
+          <MainPage/>
+        </PrivateRoute>
+      </Switch>
     </div>
   )};
 
