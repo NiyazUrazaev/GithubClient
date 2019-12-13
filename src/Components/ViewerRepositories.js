@@ -13,7 +13,7 @@ import {
   CircularProgress,
   Link,
 } from '@material-ui/core';
-import GET_VIEWER_INFO from "../Queries/query/viewer";
+import GET_VIEWER_INFO from "../Queries/queries/viewer";
 import {Query} from "@apollo/react-components";
 
 const useStyles = makeStyles(theme => ({

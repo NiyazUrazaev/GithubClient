@@ -1,5 +1,5 @@
 import React from "react";
-import GET_VIEWER_INFO from "../Queries/query/viewer";
+import GET_VIEWER_INFO from "../Queries/queries/viewer";
 import {Query} from "@apollo/react-components";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ProfilePage from "./ProfilePage";

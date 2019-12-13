@@ -5,9 +5,9 @@ import {useMutation} from "@apollo/react-hooks";
 import styles from "../GlobalCss/profilePage.js";
 import GridContainer from "./GridContainer";
 import GridItem from "./GridItem";
-import FOLLOW_USER from "../Queries/mutation/follow";
-import GET_USER_INFO from "../Queries/query/user";
-import UNFOLLOW_USER from "../Queries/mutation/unfollow";
+import FOLLOW_USER from "../Queries/mutations/follow";
+import GET_USER_INFO from "../Queries/queries/user";
+import UNFOLLOW_USER from "../Queries/mutations/unfollow";
 import {Button, Typography} from "@material-ui/core";
 import ViewerRepositories from "./ViewerRepositories";
 

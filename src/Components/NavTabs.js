@@ -5,8 +5,8 @@ import { AppBar, Tabs, Tab, Box, Typography} from '@material-ui/core';
 import MyProfile from "./MyProfile";
 import RepositorySearch from "./RepositorySearch";
 import SearchTab from "./SearchTab";
-import GET_USER_INFO from "../Queries/query/user";
-import GET_ORGANIZATION_INFO from "../Queries/query/organization";
+import GET_USER_INFO from "../Queries/queries/user";
+import GET_ORGANIZATION_INFO from "../Queries/queries/organization";
 
 function TabPanel(props) {
   const {children, value, index, ...other} = props;
