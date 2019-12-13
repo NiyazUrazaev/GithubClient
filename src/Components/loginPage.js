@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import {makeStyles} from '@material-ui/core/styles';
-import VALIDATION_QUERY from "../Queries/Get/validation";
+import VALIDATION_QUERY from "../Queries/query/validation";
 import {useLazyQuery} from "@apollo/react-hooks";
 import {AUTH_TOKEN} from "../constants";
 import {useHistory} from "react-router";

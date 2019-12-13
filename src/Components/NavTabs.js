@@ -5,8 +5,8 @@ import { AppBar, Tabs, Tab, Box, Typography} from '@material-ui/core';
 import MyProfile from "./MyProfile";
 import RepositorySearch from "./RepositorySearch";
 import SearchTab from "./SearchTab";
-import GET_USER_INFO from "../Queries/Get/user";
-import GET_ORGANIZATION_INFO from "../Queries/Get/organization";
+import GET_USER_INFO from "../Queries/query/user";
+import GET_ORGANIZATION_INFO from "../Queries/query/organization";
 
 function TabPanel(props) {
   const {children, value, index, ...other} = props;
@@ -88,11 +88,11 @@ export default function NavTabs() {
         <RepositorySearch/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <SearchTab query={GET_USER_INFO} title={"Search users"} entityName={"user"} initial_input={""}/>
+        <SearchTab query={GET_USER_INFO} title={"Search users"} entityName={"user"} initialInput={""}/>
       </TabPanel>
       <TabPanel value={value} index={3}>
         <SearchTab query={GET_ORGANIZATION_INFO} title={"Search companies"}
-                   entityName={"organization"} initial_input={""}/>
+                   entityName={"organization"} initialInput={""}/>
       </TabPanel>
     </div>
   );

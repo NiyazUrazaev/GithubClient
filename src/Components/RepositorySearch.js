@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import {Button, makeStyles, TextField, Typography} from "@material-ui/core";
 import RepoCard from "./RepoCard";
 import {useLazyQuery, useMutation} from "@apollo/react-hooks";
-import REPOS_QUERY from "../Queries/Get/repos";
-import ADD_STAR from "../Queries/Post/addStar";
-import REMOVE_STAR from "../Queries/Post/removeStar";
+import REPOS_QUERY from "../Queries/query/repos";
+import ADD_STAR from "../Queries/mutation/addStar";
+import REMOVE_STAR from "../Queries/mutation/removeStar";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 

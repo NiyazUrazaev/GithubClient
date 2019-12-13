@@ -19,7 +19,8 @@ const GET_VIEWER_INFO = gql`
                         isPrivate,
                         description,
                         pushedAt,
-                        createdAt
+                        createdAt,
+                        url
                     }
                 }
             }

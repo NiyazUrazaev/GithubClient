@@ -11,8 +11,9 @@ import {
   Typography,
   Card,
   CircularProgress,
+  Link,
 } from '@material-ui/core';
-import GET_VIEWER_INFO from "../Queries/Get/viewer";
+import GET_VIEWER_INFO from "../Queries/query/viewer";
 import {Query} from "@apollo/react-components";
 
 const useStyles = makeStyles(theme => ({
@@ -68,7 +69,8 @@ export default function ViewerRepositories() {
                       <Card className={classes.elementList} key={repo.node.id}>
                         <ListItem>
                           <ListItemText
-                            primary={repo.node.name}
+                            href={repo.node.url}
+                            primary={<Link href={repo.node.url}>{repo.node.name}</Link>}
                             secondary={secondary ? repo.node.description : null}
                           />
                         </ListItem>

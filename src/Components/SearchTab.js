@@ -35,10 +35,10 @@ const useStyles = makeStyles(theme => ({
   }))
 ;
 
-export default function SearchTab({query, title, entityName, initial_input}) {
+export default function SearchTab({query, title, entityName, initialInput}) {
   const classes = useStyles();
   const [getData, {loading, error, data}] = useLazyQuery(query);
-  const [input, setInput] = useState(initial_input);
+  const [input, setInput] = useState(initialInput);
 
   return (
     <div className={classes.root}>

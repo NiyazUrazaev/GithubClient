@@ -2,12 +2,12 @@ import React, {useState} from "react";
 import classNames from "classnames";
 import {makeStyles} from "@material-ui/core/styles";
 import {useMutation} from "@apollo/react-hooks";
-import styles from "../Css/profilePage.js";
+import styles from "../GlobalCss/profilePage.js";
 import GridContainer from "./GridContainer";
 import GridItem from "./GridItem";
-import FOLLOW_USER from "../Queries/Post/follow";
-import GET_USER_INFO from "../Queries/Get/user";
-import UNFOLLOW_USER from "../Queries/Post/unfollow";
+import FOLLOW_USER from "../Queries/mutation/follow";
+import GET_USER_INFO from "../Queries/query/user";
+import UNFOLLOW_USER from "../Queries/mutation/unfollow";
 import {Button, Typography} from "@material-ui/core";
 import ViewerRepositories from "./ViewerRepositories";
 
